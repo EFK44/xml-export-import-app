@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "xml-export-import"
+client_id = "fbf284346529dd86848721a4ba7ca172"
+application_url = "https://remember-soa-discuss-involved.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,read_products,read_product_listings,read_publications"
+
+[auth]
+redirect_urls = [
+  "https://remember-soa-discuss-involved.trycloudflare.com/auth/callback",
+  "https://remember-soa-discuss-involved.trycloudflare.com/auth/shopify/callback",
+  "https://remember-soa-discuss-involved.trycloudflare.com/api/auth/callback",
+  "https://remember-soa-discuss-involved.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "byte-dev-plus.myshopify.com"
